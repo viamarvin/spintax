@@ -1,0 +1,2 @@
+# Spintax
+Parser spintax
