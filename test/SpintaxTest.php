@@ -15,3 +15,17 @@ $text = 'Article directories are {an important {element|component|aspect} of SEO
 
 print '<p><strong>Test nested spintax:</strong> ' . $text . '</p>';
 print '<p style="color: green"><strong>Result:</strong> ' . Spintax::Parse($text) . '</p>';
+
+// Block spintax test
+$text = file_get_contents('block-spintax.txt');
+
+print '<p><strong>Test block spintax</strong></p>';
+print '<pre>';
+print $text;
+print '</pre>';
+
+print '<p style="color: green"><strong>Result:</strong></p>';
+
+print '<pre>';
+print '<div style="color: green">' . Spintax::Parse($text, [2, 5]) . '</div>';
+print '</pre>';
